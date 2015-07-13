@@ -1,0 +1,41 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: ubuntu-14.04
+    driver_config:
+       network: 
+        - ["forwarded_port", {guest: 80, host: 3080}]
+
+  - name: ec2-ubuntu-14.04
+    driver:
+      image_id: ami-5c120b19
+      username: ubuntu
+      name: ec2
+      aws_access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+      aws_secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+      aws_ssh_key_id: intro2chef-norcal
+      ssh_key: ~/.ssh/intro2chef-norcal.pem
+      security_group_ids: ["sg-7d0ac818"]
+      region: us-west-1
+      availability_zone: us-west-1a
+      require_chef_omnibus: true
+      subnet_id: subnet-d44d4b92
+      flavor_id: t2.micro
+
+suites:
+  - name: default
+    run_list:
+      - recipe[apache::default]
+    attributes:
+
+
+
+
+
+
+

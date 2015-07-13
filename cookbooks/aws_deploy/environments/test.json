@@ -1,0 +1,68 @@
+{
+  "name": "test",
+  "description": "",
+  "json_class": "Chef::Environment",
+  "chef_type": "environment",
+  "override_attributes": {
+    "delivery-cluster": {
+      "id": "test",
+      "aws": {
+        "key_name": "rycar",
+        "ssh_username": "ubuntu",
+        "image_id": "ami-3d50120d",
+        "subnet_id": "subnet-19ac017c",
+        "security_group_ids": "sg-cbacf8ae",
+        "use_private_ip_for_ssh": true
+      },
+      "delivery": {
+        "flavor": "c3.xlarge",
+        "enterprise": "delivery_enterprise",
+        "version": "latest"
+      },
+      "chef-server": {
+        "flavor": "c3.xlarge",
+        "organization": "delivery_demo"
+      },
+      "analytics": {
+        "flavor": "c3.xlarge"
+      },
+      "splunk": {
+        "flavor": "c3.large",
+        "username": "admin",
+        "password": "delivery"
+      },
+      "builders": {
+        "flavor": "c3.large",
+        "count": 3
+      }
+    },
+    "delivery-demo": {
+      "infra": {
+        "flavor": "t2.medium"
+      },
+      "users": {
+        "nrycar": {
+          "first": "Nick",
+          "last": "Rycar",
+          "email": "rycar@chef.io",
+          "password": "rycartime",
+          "roles": ["admin"],
+          "ssh_key": "/Users/nrycar/.ssh/id_rsa.pub",
+          "pem": "/Users/nrycar/.ssh/id_rsa"
+        }
+      },
+      "applications": {
+        "simple-web": {
+          "organization": "demo",
+          "pipeline": "master",
+          "cookbooks": ["simple-web"],
+          "build_cookbook": "delivery-truck",
+          "role": "web_app",
+          "description": "My Awesome Web Application",
+          "run_list": ["recipe[simple-web]"],
+          "nodes": 1
+        }
+      }
+    }
+  }
+}

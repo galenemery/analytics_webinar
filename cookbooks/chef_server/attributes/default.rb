@@ -1,0 +1,5 @@
+default['chef_server']['first_name'] = 'Chef'
+default['chef_server']['last_name'] = 'Rocks'
+default['chef_server']['username'] = 'chef'
+default['chef_server']['org_name'] = 'chef-demo'
+default['chef_server']['password'] = 'Cod3Can!'

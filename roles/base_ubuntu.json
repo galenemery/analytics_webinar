@@ -1,0 +1,22 @@
+{
+  "name": "base_ubuntu",
+  "description": "Base role for Ubuntu nodes",
+  "default_attributes": {
+    "chef_client": {
+      "interval": 60,
+      "splay": 30,
+      "config": {
+        "audit_mode": ":enabled",
+        "ssl_verify_mode": ":verify_none",
+        "verify_api_cert": false
+      }
+    }
+  },
+  "run_list": [
+    "recipe[chef-client]",
+    "recipe[chef-client::config]",
+    "recipe[ohai-public_ip]",
+    "recipe[ohai]",
+    "recipe[audit-demo::ubuntu-audit]"
+  ]
+}

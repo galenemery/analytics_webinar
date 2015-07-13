@@ -1,0 +1,10 @@
+{
+  "name": "starter",
+  "description": "An example Chef role",
+  "override_attributes": {
+    "starter_name": "Chef User"
+  },
+  "run_list": [
+    "recipe[starter]"
+  ]
+}

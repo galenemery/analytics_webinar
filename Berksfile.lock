@@ -1,0 +1,46 @@
+DEPENDENCIES
+  apache_ubuntu
+    path: cookbooks/apache_ubuntu
+  apt (~> 2.4.0)
+  audit-cis
+  audit-demo
+    path: cookbooks/audit-demo
+  aws_deploy
+    path: cookbooks/aws_deploy
+  azure_deploy
+    path: cookbooks/azure_deploy
+  chef-client
+  nopcommerce
+  simple-web
+    git: https://github.com/mattstratton/simple-web.git
+    revision: be6b045fa550243df876051ff0b101b9091c09f8
+
+GRAPH
+  apache_ubuntu (0.3.0)
+    apt (>= 0.0.0)
+    chef-client (>= 0.0.0)
+  apt (2.4.0)
+  audit-cis (0.4.0)
+  audit-demo (0.1.1)
+    iis (>= 0.0.0)
+  aws_deploy (0.1.1)
+  azure_deploy (1.0.0)
+    azure_deploy (>= 0.0.0)
+  chef-client (4.3.1)
+    cron (>= 1.2.0)
+    logrotate (>= 1.2.0)
+    windows (~> 1.37)
+  chef_handler (1.2.0)
+  cron (1.6.1)
+  httpd (0.2.18)
+  iis (4.1.1)
+    windows (>= 1.34.6)
+  logrotate (1.9.2)
+  nopcommerce (0.1.2)
+    iis (>= 0.0.0)
+    windows (>= 0.0.0)
+  simple-web (0.1.27)
+    apt (>= 0.0.0)
+    httpd (>= 0.0.0)
+  windows (1.37.0)
+    chef_handler (>= 0.0.0)

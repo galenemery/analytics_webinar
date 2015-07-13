@@ -1,0 +1,7 @@
+{
+  "name": "fourthcoffee",
+  "run_list": [
+    "role[base_windows]",
+    "recipe[fourthcoffee]"
+  ]
+}

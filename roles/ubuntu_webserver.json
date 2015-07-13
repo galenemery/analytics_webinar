@@ -1,0 +1,9 @@
+{
+  "name": "ubuntu_webserver",
+  "description": "Sets up apache on ubuntu based servers",
+  "run_list": [
+    "role[base_ubuntu]",
+    "recipe[apache_ubuntu]",
+    "recipe[aws_deploy::ubuntu_elb]"
+  ]
+}
