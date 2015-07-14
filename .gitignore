@@ -7,6 +7,11 @@ cookbooks/.kitchen/logs*
 clients
 !cookbooks/apache
 !cookbooks/*deploy
+Berksfile.lock
+
+# AWS 
+.aws/*
+
 
 # Ruby
 .rake_test_cache
