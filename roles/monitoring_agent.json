@@ -1,4 +1,0 @@
-{
-  "name": "monitoring_agent",
-  "description": "This role deploys and configures the monitoring agent."
-}
