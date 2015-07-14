@@ -12,7 +12,7 @@ with_chef_server  Chef::Config[:chef_server_url],
 name = node["aws_deploy"]["key_name"]
 
 machine_batch do
-  1.upto(3) do |i|
+  4.upto(9) do |i|
     machine "#{name}-web#{i}" do
       driver 'aws'
       machine_options :region => node["aws_deploy"]["region"],
