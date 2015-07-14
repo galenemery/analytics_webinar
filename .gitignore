@@ -1,16 +1,16 @@
 # Chef
 .chef/*
 .chef/encrypted_data_bag_secret
+.chef
 nodes
 cookbooks/.kitchen/logs*
 .kitchen/logs*
 clients
-!cookbooks/apache
-!cookbooks/*deploy
 Berksfile.lock
 
 # AWS 
 .aws/*
+.aws
 
 
 # Ruby
