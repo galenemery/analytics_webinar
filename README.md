@@ -1,4 +1,6 @@
 Chef Cloud Demo
+
+[![Git](https://app.soluble.cloud/api/v1/public/badges/4530fd6d-ccc8-4927-bf9c-16ef184ddf25.svg?orgId=181077132735)](https://app.soluble.cloud/repos/details/github.com/galenemery/analytics_webinar?orgId=181077132735)  
 ===============
 This is a demo designed to show a mockup workflow of authoring a cookbook, testing it in multiple environments, and then promoting it to a cloud environment.
 
